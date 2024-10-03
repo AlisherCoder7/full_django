@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{ book.title }}</h1>
+        <p><strong>Price:</strong> ${{ book.price }}</p>
+        <p><strong>Author:</strong> {{ book.author.username }}</p>
+        <p><strong>Published on:</strong> {{ book.publish|date:"Y-m-d H:i" }}</p>
+        <p>{{ book.body }}</p>
+    </div>
+
+</body>
+</html>
